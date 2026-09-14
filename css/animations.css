@@ -1,0 +1,39 @@
+/* =====================================================
+   ESTILO'S SALÓN — Animation Keyframes
+===================================================== */
+
+@keyframes scrollLine {
+  0% { top: -100%; }
+  100% { top: 100%; }
+}
+
+@keyframes pinPulse {
+  0% { transform: scale(0.6); opacity: 0.9; }
+  100% { transform: scale(1.9); opacity: 0; }
+}
+
+@keyframes particleDrift {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0.15; }
+  50% { transform: translateY(-18px) translateX(6px); opacity: 0.6; }
+}
+
+@keyframes softPulse {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 0.75; }
+}
+
+.hero__glow--1 { animation: softPulse 8s ease-in-out infinite; }
+.hero__glow--2 { animation: softPulse 10s ease-in-out infinite 1.5s; }
+
+/* Reduced motion: kill decorative loops, keep content visible */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal-up { opacity: 1 !important; transform: none !important; }
+  .intro { display: none !important; }
+  .navbar { opacity: 1 !important; transform: none !important; }
+}

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESTILO'S SALÓN — Salón de Belleza Premium</title>
+<meta name="description" content="ESTILO'S SALÓN — Experiencia de belleza premium en El Salvador. Corte, color, tratamientos capilares y uñas con un estándar de lujo.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="assets/images/logo-symbol.svg" type="image/svg+xml">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- ============================================ -->
+<!-- CURSOR PERSONALIZADO (desktop) -->
+<!-- ============================================ -->
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- ============================================ -->
+<!-- INTRO CINEMATOGRÁFICA -->
+<!-- ============================================ -->
+<div id="intro" class="intro" aria-hidden="true">
+  <div class="intro-ambient"></div>
+  <div class="intro-grain"></div>
+
+  <div class="intro-stage">
+    <div class="logo-3d" id="introLogo">
+      <div class="logo-3d__halo"></div>
+      <div class="logo-3d__symbol">
+        <img src="assets/images/logo-symbol.svg" alt="" draggable="false">
+        <span class="logo-3d__sweep"></span>
+      </div>
+      <div class="logo-3d__wordmark">
+        <span class="wm-word">ESTILO'S</span>
+        <span class="wm-word wm-word--accent">SALÓN</span>
+      </div>
+      <div class="logo-3d__rule"></div>
+    </div>
+    <p class="intro-tagline">Tu estilo comienza aquí.<span class="intro-tagline__note">(texto temporal — pendiente de slogan oficial)</span></p>
+  </div>
+
+  <div class="intro-skip">
+    <button type="button" id="skipIntro" class="intro-skip__btn">Saltar intro</button>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- NAVBAR -->
+<!-- ============================================ -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#inicio" class="navbar__brand" aria-label="ESTILO'S SALÓN — Inicio">
+      <img src="assets/images/logo-symbol.svg" alt="" class="navbar__brand-symbol" draggable="false">
+      <span class="navbar__brand-text">ESTILO'S <em>SALÓN</em></span>
+    </a>
+
+    <nav class="navbar__nav" id="navMenu" aria-label="Navegación principal">
+      <a href="#inicio" class="navbar__link is-active"><span>Inicio</span></a>
+      <a href="#nosotros" class="navbar__link"><span>Nosotros</span></a>
+      <a href="#servicios" class="navbar__link"><span>Servicios</span></a>
+      <a href="#galeria" class="navbar__link"><span>Galería</span></a>
+      <a href="#sucursales" class="navbar__link"><span>Sucursales</span></a>
+      <a href="#contacto" class="navbar__link"><span>Contacto</span></a>
+    </nav>
+
+    <div class="navbar__actions">
+      <a href="#contacto" class="btn btn--ghost-glow navbar__cta">
+        <span>Reservar Cita</span>
+      </a>
+      <button type="button" class="navbar__burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================ -->
+<!-- MAIN -->
+<!-- ============================================ -->
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__glow hero__glow--1"></div>
+      <div class="hero__glow hero__glow--2"></div>
+      <div class="hero__particles" id="heroParticles"></div>
+    </div>
+
+    <div class="hero__content container">
+      <span class="eyebrow reveal-up">Salón de belleza — El Salvador</span>
+      <h1 class="hero__title">
+        <span class="reveal-up" style="--d:0">Belleza que</span>
+        <span class="reveal-up hero__title--accent" style="--d:1">se siente</span>
+        <span class="reveal-up" style="--d:2">tecnología.</span>
+      </h1>
+      <p class="hero__desc reveal-up" style="--d:3">Una experiencia de estilismo diseñada con la misma precisión, cuidado y elegancia que una marca de lujo. Cada detalle, pensado para ti.</p>
+      <div class="hero__actions reveal-up" style="--d:4">
+        <a href="#contacto" class="btn btn--solid-glow"><span>Reservar Cita</span></a>
+        <a href="#servicios" class="btn btn--outline"><span>Ver Servicios</span></a>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span class="hero__scroll-line"></span>
+      <span class="hero__scroll-text">Desliza</span>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="about" id="nosotros">
+    <div class="about__glowline" aria-hidden="true"></div>
+    <div class="container about__grid">
+
+      <div class="about__visual">
+        <div class="about__frame">
+          <img src="assets/images/about-salon.jpg" alt="Interior del salón — ambiente de trabajo" class="about__frame-img" loading="lazy">
+          <div class="about__frame-accent"></div>
+        </div>
+        <div class="about__float-card">
+          <span class="about__float-num">[AGREGAR AÑO]</span>
+          <span class="about__float-label">Fundado en</span>
+        </div>
+      </div>
+
+      <div class="about__copy">
+        <span class="eyebrow reveal-up">Nuestra esencia</span>
+        <h2 class="section-title reveal-up">
+          No cortamos cabello.<br>
+          <em>Diseñamos identidad.</em>
+        </h2>
+        <p class="about__text reveal-up">
+          ESTILO'S SALÓN nace de una idea simple: la belleza merece el mismo nivel de cuidado, técnica
+          y sofisticación que cualquier otra forma de arte. Cada visita es una experiencia curada —
+          desde el primer contacto hasta el resultado final.
+        </p>
+        <p class="about__text reveal-up">
+          Combinamos técnica depurada con una atención completamente personalizada, en un espacio
+          pensado para que te sientas exactamente donde perteneces: en el centro de tu propia
+          transformación.
+        </p>
+
+        <div class="about__stats reveal-up">
+          <div class="about__stat">
+            <span class="about__stat-num">[AGREGAR]</span>
+            <span class="about__stat-label">Clientas satisfechas</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-num">[AGREGAR]</span>
+            <span class="about__stat-label">Estilistas certificados</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-num">[AGREGAR]</span>
+            <span class="about__stat-label">Sucursales</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="services" id="servicios">
+    <div class="container">
+      <div class="services__head">
+        <span class="eyebrow reveal-up">Lo que ofrecemos</span>
+        <h2 class="section-title reveal-up">Servicios diseñados<br><em>para cada versión de ti.</em></h2>
+      </div>
+
+      <div class="services__grid">
+
+        <article class="service reveal-up">
+          <div class="service__media">
+            <img src="assets/images/service-corte.jpg" alt="Corte y estilizado de cabello" loading="lazy">
+          </div>
+          <div class="service__body">
+            <span class="service__index">01</span>
+            <h3 class="service__title">Corte &amp; Estilizado</h3>
+            <p class="service__desc">Técnica de precisión adaptada a tu rostro y personalidad.</p>
+            <span class="service__price">[AGREGAR PRECIO]</span>
+          </div>
+          <span class="service__glow" aria-hidden="true"></span>
+        </article>
+
+        <article class="service reveal-up">
+          <div class="service__media">
+            <img src="assets/images/service-color.jpg" alt="Aplicación de color y mechas con papel aluminio" loading="lazy">
+          </div>
+          <div class="service__body">
+            <span class="service__index">02</span>
+            <h3 class="service__title">Color &amp; Mechas</h3>
+            <p class="service__desc">Coloración experta, de tonos naturales a transformaciones completas.</p>
+            <span class="service__price">[AGREGAR PRECIO]</span>
+          </div>
+          <span class="service__glow" aria-hidden="true"></span>
+        </article>
+
+        <article class="service reveal-up">
+          <div class="service__media">
+            <img src="assets/images/service-tratamientos.jpg" alt="Tratamiento y secado profesional" loading="lazy">
+          </div>
+          <div class="service__body">
+            <span class="service__index">03</span>
+            <h3 class="service__title">Alisados &amp; Tratamientos</h3>
+            <p class="service__desc">Tratamientos capilares profundos para salud y brillo duradero.</p>
+            <span class="service__price">[AGREGAR PRECIO]</span>
+          </div>
+          <span class="service__glow" aria-hidden="true"></span>
+        </article>
+
+        <article class="service reveal-up">
+          <div class="service__media">
+            <img src="assets/images/service-manicure.jpg" alt="Manicure francesa con detalles de brillo" loading="lazy">
+          </div>
+          <div class="service__body">
+            <span class="service__index">04</span>
+            <h3 class="service__title">Manicure &amp; Pedicure</h3>
+            <p class="service__desc">Cuidado integral de manos y pies con acabado impecable.</p>
+            <span class="service__price">[AGREGAR PRECIO]</span>
+          </div>
+          <span class="service__glow" aria-hidden="true"></span>
+        </article>
+
+        <article class="service reveal-up">
+          <div class="service__media">
+            <img src="assets/images/service-unas.jpg" alt="Diseño de uñas con acabado marmoleado" loading="lazy">
+          </div>
+          <div class="service__body">
+            <span class="service__index">05</span>
+            <h3 class="service__title">Diseño de Uñas</h3>
+            <p class="service__desc">Arte en uñas: acrílico, gel y diseños personalizados.</p>
+            <span class="service__price">[AGREGAR PRECIO]</span>
+          </div>
+          <span class="service__glow" aria-hidden="true"></span>
+        </article>
+
+        <article class="service reveal-up">
+          <div class="service__media">
+            <img src="assets/images/service-peinados.jpg" alt="Peinado con plancha rizadora" loading="lazy">
+          </div>
+          <div class="service__body">
+            <span class="service__index">06</span>
+            <h3 class="service__title">[AGREGAR SERVICIO]</h3>
+            <p class="service__desc">[Agregar descripción del servicio adicional]</p>
+            <span class="service__price">[AGREGAR PRECIO]</span>
+          </div>
+          <span class="service__glow" aria-hidden="true"></span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="gallery" id="galeria">
+    <div class="container">
+      <div class="gallery__head">
+        <span class="eyebrow reveal-up">Resultados</span>
+        <h2 class="section-title reveal-up">Una galería que<br><em>habla por sí sola.</em></h2>
+      </div>
+    </div>
+
+    <div class="gallery__masonry container">
+      <button class="gallery__item gallery__item--tall reveal-up" data-caption="Ambiente y diseño del espacio">
+        <img src="assets/images/gallery-1.jpg" alt="Interior del salón con iluminación de neón" loading="lazy">
+        <span class="gallery__overlay"><span class="gallery__overlay-icon">＋</span><span class="gallery__overlay-text">Ambiente y diseño del espacio</span></span>
+      </button>
+      <button class="gallery__item reveal-up" data-caption="Estilo e iluminación">
+        <img src="assets/images/gallery-2.jpg" alt="Interior moderno del salón" loading="lazy">
+        <span class="gallery__overlay"><span class="gallery__overlay-icon">＋</span><span class="gallery__overlay-text">Estilo e iluminación</span></span>
+      </button>
+      <button class="gallery__item gallery__item--wide reveal-up" data-caption="Precisión y detalle en cada servicio">
+        <img src="assets/images/gallery-3.jpg" alt="Estilista trabajando con precisión sobre el cabello de una clienta" loading="lazy">
+        <span class="gallery__overlay"><span class="gallery__overlay-icon">＋</span><span class="gallery__overlay-text">Precisión y detalle en cada servicio</span></span>
+      </button>
+      <button class="gallery__item reveal-up" data-caption="Cuidado capilar">
+        <img src="assets/images/gallery-4.jpg" alt="Lavado de cabello en el salón" loading="lazy">
+        <span class="gallery__overlay"><span class="gallery__overlay-icon">＋</span><span class="gallery__overlay-text">Cuidado capilar</span></span>
+      </button>
+      <button class="gallery__item gallery__item--tall reveal-up" data-caption="Arte en uñas">
+        <img src="assets/images/gallery-5.jpg" alt="Diseño de uñas ornamentado" loading="lazy">
+        <span class="gallery__overlay"><span class="gallery__overlay-icon">＋</span><span class="gallery__overlay-text">Arte en uñas</span></span>
+      </button>
+      <button class="gallery__item reveal-up" data-caption="Estilizado y acabado">
+        <img src="assets/images/gallery-6.jpg" alt="Estilizado de cabello rubio ondulado" loading="lazy">
+        <span class="gallery__overlay"><span class="gallery__overlay-icon">＋</span><span class="gallery__overlay-text">Estilizado y acabado</span></span>
+      </button>
+      <button class="gallery__item gallery__item--wide reveal-up" data-caption="Resultado premium">
+        <img src="assets/images/gallery-7.jpg" alt="Estilistas trabajando en un salón moderno" loading="lazy">
+        <span class="gallery__overlay"><span class="gallery__overlay-icon">＋</span><span class="gallery__overlay-text">Resultado premium</span></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- SUCURSALES -->
+  <section class="branches" id="sucursales">
+    <div class="container">
+      <div class="branches__head">
+        <span class="eyebrow reveal-up">Visítanos</span>
+        <h2 class="section-title reveal-up">Encuéntranos<br><em>cerca de ti.</em></h2>
+      </div>
+
+      <div class="branches__grid">
+
+        <article class="branch reveal-up">
+          <div class="branch__map" aria-hidden="true">
+            <span class="branch__map-pin"></span>
+          </div>
+          <div class="branch__body">
+            <h3 class="branch__name">Sucursal [AGREGAR NOMBRE]</h3>
+            <ul class="branch__meta">
+              <li><strong>Dirección:</strong> [AGREGAR DIRECCIÓN]</li>
+              <li><strong>Horario:</strong> [AGREGAR HORARIO]</li>
+              <li><strong>Teléfono:</strong> [AGREGAR TELÉFONO]</li>
+            </ul>
+            <div class="branch__actions">
+              <a href="#" class="btn btn--outline btn--sm"><span>Ver mapa</span></a>
+              <a href="#" class="btn btn--ghost-glow btn--sm"><span>Contactar</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="branch reveal-up">
+          <div class="branch__map" aria-hidden="true">
+            <span class="branch__map-pin"></span>
+          </div>
+          <div class="branch__body">
+            <h3 class="branch__name">Sucursal [AGREGAR NOMBRE]</h3>
+            <ul class="branch__meta">
+              <li><strong>Dirección:</strong> [AGREGAR DIRECCIÓN]</li>
+              <li><strong>Horario:</strong> [AGREGAR HORARIO]</li>
+              <li><strong>Teléfono:</strong> [AGREGAR TELÉFONO]</li>
+            </ul>
+            <div class="branch__actions">
+              <a href="#" class="btn btn--outline btn--sm"><span>Ver mapa</span></a>
+              <a href="#" class="btn btn--ghost-glow btn--sm"><span>Contactar</span></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO / RESERVA -->
+  <section class="contact" id="contacto">
+    <div class="contact__glow" aria-hidden="true"></div>
+    <div class="container contact__grid">
+
+      <div class="contact__copy">
+        <span class="eyebrow reveal-up">Reserva tu cita</span>
+        <h2 class="section-title reveal-up">Tu próxima ver sión<br><em>empieza aquí.</em></h2>
+        <p class="about__text reveal-up">
+          Escríbenos y agenda tu cita. Nuestro equipo confirmará contigo el horario y el servicio ideal.
+        </p>
+
+        <ul class="contact__info reveal-up">
+          <li><span class="contact__info-label">Teléfono</span><span class="contact__info-value">[AGREGAR TELÉFONO]</span></li>
+          <li><span class="contact__info-label">Correo</span><span class="contact__info-value">[AGREGAR CORREO]</span></li>
+          <li><span class="contact__info-label">Redes</span>
+            <span class="contact__socials">
+              <a href="#" aria-label="Facebook">FB</a>
+              <a href="#" aria-label="Instagram">IG</a>
+              <a href="#" aria-label="TikTok">TT</a>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <form class="contact__form reveal-up" id="contactForm" novalidate>
+        <div class="field">
+          <input type="text" id="fname" name="nombre" required placeholder=" ">
+          <label for="fname">Nombre completo</label>
+        </div>
+        <div class="field">
+          <input type="tel" id="fphone" name="telefono" required placeholder=" ">
+          <label for="fphone">Teléfono / WhatsApp</label>
+        </div>
+        <div class="field">
+          <select id="fservice" name="servicio" required>
+            <option value="" disabled selected hidden> </option>
+            <option>Corte &amp; Estilizado</option>
+            <option>Color &amp; Mechas</option>
+            <option>Alisados &amp; Tratamientos</option>
+            <option>Manicure &amp; Pedicure</option>
+            <option>Diseño de Uñas</option>
+            <option>Otro</option>
+          </select>
+          <label for="fservice" class="field__label-static">Servicio de interés</label>
+        </div>
+        <div class="field">
+          <textarea id="fmsg" name="mensaje" rows="3" placeholder=" "></textarea>
+          <label for="fmsg">Mensaje (opcional)</label>
+        </div>
+        <button type="submit" class="btn btn--solid-glow contact__submit"><span>Enviar Solicitud</span></button>
+        <p class="contact__note">Este formulario es una plantilla de contacto. Conéctalo a tu servicio de envío preferido (email, WhatsApp API, etc.) antes de publicar.</p>
+      </form>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================ -->
+<!-- FOOTER -->
+<!-- ============================================ -->
+<footer class="footer">
+  <div class="footer__glow" aria-hidden="true"></div>
+  <div class="container footer__grid">
+
+    <div class="footer__brand">
+      <img src="assets/images/logo-symbol.svg" alt="" class="footer__brand-symbol" draggable="false">
+      <span class="footer__brand-text">ESTILO'S <em>SALÓN</em></span>
+      <p class="footer__tag">Belleza, técnica y tecnología en un solo lugar.</p>
+    </div>
+
+    <div class="footer__col">
+      <h4>Navegación</h4>
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#galeria">Galería</a>
+      <a href="#sucursales">Sucursales</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Sucursales</h4>
+      <span>[AGREGAR NOMBRE] — [AGREGAR DIRECCIÓN]</span>
+      <span>[AGREGAR NOMBRE] — [AGREGAR DIRECCIÓN]</span>
+    </div>
+
+    <div class="footer__col">
+      <h4>Síguenos</h4>
+      <a href="#">Facebook — [AGREGAR ENLACE]</a>
+      <a href="#">Instagram — [AGREGAR ENLACE]</a>
+      <a href="#">TikTok — [AGREGAR ENLACE]</a>
+      <a href="#">WhatsApp — [AGREGAR NÚMERO]</a>
+    </div>
+
+  </div>
+
+  <div class="container footer__bottom">
+    <span>© <span id="year"></span> ESTILO'S SALÓN. Todos los derechos reservados.</span>
+    <span>Hecho con precisión y buen gusto.</span>
+  </div>
+</footer>
+
+<!-- ============================================ -->
+<!-- WHATSAPP FLOTANTE -->
+<!-- ============================================ -->
+<a href="https://wa.me/50300000000" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Escríbenos por WhatsApp">
+  <span class="whatsapp-fab__tooltip">Escríbenos</span>
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3C9.4 3 4 8.38 4 15c0 2.39.7 4.62 1.9 6.49L4 29l7.71-1.86A11.9 11.9 0 0 0 16.02 27C22.65 27 28 21.62 28 15S22.65 3 16.02 3Zm0 21.6c-1.98 0-3.83-.55-5.4-1.5l-.39-.23-4.57 1.1 1.13-4.46-.25-.4A9.53 9.53 0 0 1 5.4 15c0-5.86 4.77-10.6 10.62-10.6S26.6 9.14 26.6 15 21.86 24.6 16.02 24.6Zm5.8-7.94c-.32-.16-1.87-.92-2.16-1.03-.29-.1-.5-.16-.71.16-.21.32-.82 1.03-1 1.24-.19.21-.37.24-.69.08-.32-.16-1.34-.49-2.55-1.57-.94-.84-1.58-1.87-1.76-2.19-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.71-.98-2.34-.26-.62-.52-.53-.71-.54-.18-.01-.4-.01-.61-.01-.21 0-.56.08-.85.4-.29.32-1.12 1.1-1.12 2.67 0 1.57 1.15 3.09 1.31 3.3.16.21 2.26 3.45 5.47 4.84.76.33 1.36.53 1.82.68.77.24 1.47.21 2.02.13.62-.09 1.87-.76 2.13-1.5.26-.74.26-1.37.19-1.5-.08-.14-.29-.21-.6-.37Z"/></svg>
+</a>
+
+<!-- ============================================ -->
+<!-- LIGHTBOX -->
+<!-- ============================================ -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Cerrar">✕</button>
+  <div class="lightbox__stage">
+    <img id="lightboxImg" class="lightbox__img" src="" alt="">
+    <span class="lightbox__caption" id="lightboxLabel"></span>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SCRIPTS -->
+<!-- ============================================ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script src="js/navigation.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
