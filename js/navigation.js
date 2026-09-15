@@ -32,8 +32,38 @@
     });
   });
 
-  // Smooth anchor scroll (respects reduced motion)
+  // Section-to-section navigation: brief brand transition, then jump (like loading a new screen)
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const loader = document.getElementById('sectionLoader');
+  let isTransitioning = false;
+
+  function currentOffset() {
+    return navbar && navbar.classList.contains('is-scrolled') ? 72 : 84;
+  }
+
+  function goToTarget(target) {
+    const y = target.getBoundingClientRect().top + window.scrollY - currentOffset();
+
+    if (reduceMotion || !loader) {
+      window.scrollTo({ top: y, behavior: reduceMotion ? 'auto' : 'smooth' });
+      return;
+    }
+    if (isTransitioning) return;
+    isTransitioning = true;
+
+    loader.classList.add('is-active');
+    loader.setAttribute('aria-hidden', 'false');
+
+    setTimeout(() => {
+      window.scrollTo({ top: y, behavior: 'auto' });
+      setTimeout(() => {
+        loader.classList.remove('is-active');
+        loader.setAttribute('aria-hidden', 'true');
+        isTransitioning = false;
+      }, 120);
+    }, 420);
+  }
+
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener('click', (e) => {
       const id = a.getAttribute('href');
@@ -41,9 +71,7 @@
       const target = document.querySelector(id);
       if (!target) return;
       e.preventDefault();
-      const offset = 84;
-      const y = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top: y, behavior: reduceMotion ? 'auto' : 'smooth' });
+      goToTarget(target);
     });
   });
 

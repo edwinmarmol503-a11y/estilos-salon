@@ -35,6 +35,32 @@
 html {
   scroll-behavior: auto;
   background: var(--black-deep);
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: var(--nav-h);
+}
+
+/* Each top-level section reads as its own full screen */
+main > section {
+  scroll-snap-align: start;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero { display: flex; flex-direction: row; }
+
+/* Thin glowing edge marks the boundary between screens */
+.services::before,
+.gallery::before,
+.branches::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  width: min(50%, 420px); height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, var(--blue-neon), transparent);
+  box-shadow: 0 0 10px var(--blue-glow-mid);
+  opacity: 0.5;
 }
 
 body {
@@ -130,6 +156,7 @@ input, textarea, select { font: inherit; color: inherit; }
   overflow: hidden;
   transition: transform 0.4s var(--ease-soft), box-shadow 0.4s var(--ease-soft), border-color 0.4s var(--ease-soft);
 }
+.btn:active { transform: scale(0.97); transition: transform 0.1s ease-out; }
 .btn span { position: relative; z-index: 2; }
 .btn--sm { height: 44px; padding-inline: 26px; font-size: 11.5px; }
 
@@ -204,6 +231,38 @@ input, textarea, select { font: inherit; color: inherit; }
 }
 html.no-custom-cursor .cursor-dot,
 html.no-custom-cursor .cursor-ring { display: none; }
+
+/* =====================================================
+   SECTION LOADER (transición entre pantallas)
+===================================================== */
+
+.section-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 7000;
+  background: var(--black-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s var(--ease-soft), visibility 0.3s;
+}
+.section-loader.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+.section-loader__mark {
+  width: 56px;
+  opacity: 0;
+  transform: scale(0.85);
+  filter: drop-shadow(0 0 0 rgba(0, 175, 255, 0));
+}
+.section-loader.is-active .section-loader__mark {
+  animation: loaderReveal 0.5s var(--ease-soft) forwards;
+}
 
 /* =====================================================
    INTRO CINEMATOGRÁFICA
@@ -424,6 +483,7 @@ html.no-custom-cursor .cursor-ring { display: none; }
   transform-origin: left;
   transition: transform 0.4s var(--ease-soft);
 }
+.navbar__link:active { opacity: 0.6; transition: opacity 0.1s ease-out; }
 .navbar__link:hover,
 .navbar__link.is-active { color: var(--white); }
 .navbar__link:hover::after,
@@ -554,7 +614,7 @@ html.no-custom-cursor .cursor-ring { display: none; }
 
 .about {
   position: relative;
-  padding: 160px 0;
+  padding: 110px 0;
   overflow: hidden;
 }
 .about__glowline {
@@ -648,7 +708,7 @@ html.no-custom-cursor .cursor-ring { display: none; }
    SERVICIOS
 ===================================================== */
 
-.services { padding: 140px 0 160px; }
+.services { position: relative; padding: 110px 0; }
 .services__head { max-width: 640px; margin-bottom: 70px; }
 
 .services__grid {
@@ -731,7 +791,7 @@ html.no-custom-cursor .cursor-ring { display: none; }
    GALERÍA
 ===================================================== */
 
-.gallery { padding: 140px 0 160px; }
+.gallery { position: relative; padding: 110px 0; }
 .gallery__head { max-width: 640px; margin-bottom: 60px; }
 
 .gallery__masonry {
@@ -792,7 +852,7 @@ html.no-custom-cursor .cursor-ring { display: none; }
    SUCURSALES
 ===================================================== */
 
-.branches { padding: 140px 0 160px; }
+.branches { position: relative; padding: 110px 0; }
 .branches__head { max-width: 640px; margin-bottom: 60px; }
 
 .branches__grid {
@@ -855,7 +915,7 @@ html.no-custom-cursor .cursor-ring { display: none; }
    CONTACTO
 ===================================================== */
 
-.contact { position: relative; padding: 160px 0; overflow: hidden; }
+.contact { position: relative; padding: 110px 0; overflow: hidden; }
 .contact__glow {
   position: absolute;
   top: 10%; right: -10%;

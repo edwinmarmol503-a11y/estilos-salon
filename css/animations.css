@@ -12,6 +12,11 @@
   100% { transform: scale(1.9); opacity: 0; }
 }
 
+@keyframes loaderReveal {
+  0% { opacity: 0; transform: scale(0.85); filter: drop-shadow(0 0 0 rgba(0, 175, 255, 0)); }
+  100% { opacity: 1; transform: scale(1); filter: drop-shadow(0 0 14px rgba(0, 175, 255, 0.6)); }
+}
+
 @keyframes particleDrift {
   0%, 100% { transform: translateY(0) translateX(0); opacity: 0.15; }
   50% { transform: translateY(-18px) translateX(6px); opacity: 0.6; }
@@ -36,4 +41,6 @@
   .reveal-up { opacity: 1 !important; transform: none !important; }
   .intro { display: none !important; }
   .navbar { opacity: 1 !important; transform: none !important; }
+  .section-loader { display: none !important; }
+  html { scroll-snap-type: none !important; }
 }
